@@ -16,6 +16,11 @@ class Complex(re: Double, im: Double = 0) {
 
   def *(c: Complex) = new Complex((re1 * c.re1 - im1 * c.im1), (re1 * c.im1 + im1 * c.re1))
 
+  def /(c: Complex) = new Complex(
+    (re1 * c.re1 + im1 * c.im1) / (c.re1*c.re1 + c.im1*c.im1), // RE
+    (im1 * c.re1 - re1 * c.im1) / (c.re1*c.re1 + c.im1*c.im1)  // IM
+  )
+
   def conj(): Complex = new Complex(re1, -im1)
 
   def abs(): Double = (math.sqrt(re1 * re1 + im1 * im1))

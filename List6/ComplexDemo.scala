@@ -16,6 +16,7 @@ object ComplexDemo {
     println("a+b: " + (zA + zB))
     println("a-b: " + (zA - zB))
     println("a*b: " + (zA * zB))
+    println("a/b: " + (zA / zB))
     println("a * conj(a): " + (zA * zA.conj()))
 
     val res = (new Complex(5) * zA) + (new Complex(7) * zB)
